@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>$VIPER_DataManager</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>return Promise&lt;&lt;#promise type#&gt;&gt; { fullfil, reject in
+    let _: () = LinkydogAPIService.&lt;# API calls #&gt;
+    .then { JSONString -&gt; Void in
+        &lt;# ... #&gt;
+    }
+    .catch { error -&gt; Void in
+        reject(error)
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>77742BC5-BF37-45AE-9D66-EFC71518506D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>VIPER Data Manager method implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>$VIPER_Interactor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let _: () = self.dataManager.&lt;# data manager method #&gt;
+            .then { JSONItem -&gt; Void in
+                let item = self.&lt;# convert method #&gt;(JSONItem)
+                MBLog.app(MBLog.Level.High, object: "Did &lt;# successful action #&gt;: \(item).")
+                self.output?.did&lt;# output successful callback #&gt;(item)
+            }
+            .catch { error -&gt; Void in
+                MBLog.app(MBLog.Level.High, object: "Did fail to &lt;# failure action #&gt;.")
+                self.output?.didFailTo&lt;# output failure action #&gt;(error)
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3780DE87-5C41-45D3-8AAE-99ADE0D6414E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>VIIPER Interactor method implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

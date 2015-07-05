@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>$Mapper</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if let JSONItem = Mapper&lt;&lt;# JSON mappable class #&gt;&gt;().map(JSONString) {
+                        MBLog.data(MBLog.Level.High, object: "Did map &lt;# mappable object #&gt; JSON response: \(JSONItem).")
+                        fullfil(JSONItem)
+                    }
+                    else {
+                        let mappingError = &lt;# Error type #&gt;.Mapping(JSONString).error
+                        MBLog.error(MBLog.Level.High, object: mappingError)
+                        reject(mappingError)
+                    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CCFABE80-CDB5-4906-99FB-284F45D4AEF2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Map JSON data from API calls</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
