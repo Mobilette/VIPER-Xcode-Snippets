@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>$Network_Service</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if let statusCode = response?.statusCode {
+    switch statusCode {
+    case 200...299:
+        if let string = JSONString {
+            MBLog.network(MBLog.Level.High, object: "Did &lt;# Name of the request #&gt;: \(string).")
+            fullfil(string)
+        }
+        else {
+            let missingDatasError = LinkydogDogSitterAPIError.MissingData(&lt;# Router name #&gt;Router).error
+            MBLog.error(MBLog.Level.High, object: missingDatasError)
+            reject(missingDatasError)
+        }
+    case 401:
+        let unauthorizedError = &lt;# Service name #&gt;APIError.Unauthorized(&lt;# Router name #&gt;Router).error
+        MBLog.error(MBLog.Level.High, object: unauthorizedError)
+        reject(unauthorizedError)
+    default:
+        if let JSONError = error {
+            MBLog.error(MBLog.Level.High, object: error)
+            reject(JSONError)
+        }
+        else {
+            let missingDatasError = &lt;# Service name #&gt;APIError.Unknown(&lt;# Router name #&gt;Router).error
+            MBLog.error(MBLog.Level.High, object: missingDatasError)
+            reject(missingDatasError)
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E0DAD686-D76A-47A1-A5EC-6AC28CF803C2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Network Service response implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
