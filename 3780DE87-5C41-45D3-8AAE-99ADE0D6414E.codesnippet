@@ -10,12 +10,12 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let _: () = self.dataManager.&lt;# data manager method #&gt;
-            .then { JSONItem -&gt; Void in
+            .then { [unowned self] JSONItem -&gt; Void in
                 let item = self.&lt;# convert method #&gt;(JSONItem)
                 MBLog.app(MBLog.Level.High, object: "Did &lt;# successful action #&gt;: \(item).")
                 self.output?.did&lt;# output successful callback #&gt;(item)
             }
-            .catch { error -&gt; Void in
+            .catch { [unowned self] error -&gt; Void in
                 MBLog.app(MBLog.Level.High, object: "Did fail to &lt;# failure action #&gt;.")
                 self.output?.didFailTo&lt;# output failure action #&gt;(error)
         }</string>
