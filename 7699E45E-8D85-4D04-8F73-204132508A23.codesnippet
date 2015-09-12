@@ -9,10 +9,12 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var presenter = &lt;# Prepared class #&gt;Presenter()
-        var interactor = &lt;# Prepared class #&gt;Interactor()
-        var wireframe = &lt;# Prepared class #&gt;Wireframe()
+	<string>let presenter = &lt;# Prepared class #&gt;Presenter()
+		// let networkController = &lt;# Prepared class #&gt;NetworkController()
+        let interactor = &lt;# Prepared class #&gt;Interactor()
+        let wireframe = &lt;# Prepared class #&gt;Wireframe()
         interactor.output = presenter
+        // interactor.networkController = networkController
         presenter.interactor = interactor
         presenter.wireframe = wireframe
         wireframe.presenter = presenter

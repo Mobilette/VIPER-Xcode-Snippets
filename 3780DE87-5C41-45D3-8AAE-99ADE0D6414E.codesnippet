@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let _: () = self.dataManager.&lt;# data manager method #&gt;
+	<string>let _: () = self.networkController.&lt;# network controller method #&gt;
             .then { [unowned self] JSONItem -&gt; Void in
                 let item = self.&lt;# convert method #&gt;(JSONItem)
                 MBLog.app(MBLog.Level.High, object: "Did &lt;# successful action #&gt;: \(item).")
